@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Prudhvi Nelavelli | LeetCode-style Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- System fonts by default; keep lightweight for GitHub Pages -->
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="lc-mark" aria-hidden="true">≋</div>
+      <div class="topbar-title">
+        <div class="topbar-kicker">Daily Question</div>
+        <div class="crumbs">
+          <span class="crumb">Portfolio</span>
+          <span class="sep">›</span>
+          <span class="crumb" id="crumbTitle">Description</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <button class="iconbtn" id="btnTheme" title="Toggle theme" aria-label="Toggle theme">
+        <span class="dot"></span>
+      </button>
+      <a class="pilllink" id="linkGithub" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="pilllink" id="linkLinkedIn" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="pilllink" id="linkResume" target="_blank" rel="noreferrer">Resume</a>
+      <a class="pilllink" id="linkEmail">Contact</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: problem panel -->
+    <section class="panel left">
+      <div class="tabs">
+        <button class="tab active" data-tab="description">Description</button>
+        <button class="tab" data-tab="solutions">Projects</button>
+        <button class="tab" data-tab="submissions">Experience</button>
+        <button class="tab" data-tab="discuss">Programming</button>
+        <button class="tab" data-tab="contact">Contact</button>
+      </div>
+
+      <div class="scroll">
+        <div class="profileHeader">
+          <img id="avatar" class="avatar" alt="Profile photo"/>
+          <div class="phText">
+            <h1 id="name">Prudhvi Nelavelli</h1>
+            <div id="headline" class="headline"></div>
+          </div>
+        </div>
+
+        <div class="badges" id="metaBadges"></div>
+
+        <div id="leftContent"></div>
+
+        <div class="leftFooter">
+          <div class="miniLinks">
+            <a id="footGithub" target="_blank" rel="noreferrer">GitHub</a>
+            <span class="dotSep">•</span>
+            <a id="footLinkedIn" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="dotSep">•</span>
+            <a id="footEmail">Email</a>
+            <span class="dotSep">•</span>
+            <a id="footResume" target="_blank" rel="noreferrer">Resume (PDF)</a>
+          </div>
+          <div class="tiny" id="lastUpdated"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: editor + console -->
+    <section class="panel right">
+      <div class="editorTop">
+        <div class="editorTitle">Code</div>
+        <div class="editorControls">
+          <div class="selectWrap">
+            <select id="langSelect" aria-label="Language"></select>
+          </div>
+          <div class="selectWrap">
+            <select id="modeSelect" aria-label="Mode">
+              <option>Auto</option>
+              <option>Readable</option>
+              <option>Compact</option>
+            </select>
+          </div>
+          <button class="btn" id="btnCopy">Copy</button>
+          <button class="btn" id="btnReset">Reset</button>
+          <button class="btn primary" id="btnRun">Run</button>
+        </div>
+      </div>
+
+      <div class="editorPane">
+        <pre class="code" id="codeBlock" tabindex="0"></pre>
+      </div>
+
+      <div class="consoleTop">
+        <div class="consoleTabs">
+          <button class="ctab active" data-ctab="testcase">Testcase</button>
+          <button class="ctab" data-ctab="result">Test Result</button>
+        </div>
+      </div>
+
+      <div class="consolePane">
+        <div id="consoleBody"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
